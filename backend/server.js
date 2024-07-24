@@ -25,6 +25,9 @@ require('./models/ostali_nacin');
 require('./models/sezona');
 require('./models/stavljanje');
 require('./models/trik');
+require('./models/vip_clan');
+require('./models/vip_cigara');
+require('./models/vip_sezona');
 
 const anketeRouter=require('./routes/ankete');
 const cigareRouter=require('./routes/cigare');

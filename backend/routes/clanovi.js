@@ -6,7 +6,7 @@ const Clan=require('../models/clan');
 
 router.get('/',async(req,res)=>{
     try{
-        const clanovi=await Clan.find().populate('spremi_anketu');
+        const clanovi=await Clan.find();
         res.json(clanovi);
     }catch(err){
         res.status(500).json({message:err.message});
@@ -15,7 +15,7 @@ router.get('/',async(req,res)=>{
 
 router.get('/:id',async(req,res)=>{
     try{
-        const clan=await Clan.findById(req.params.id).populate('spremi_anketu');
+        const clan=await Clan.findById(req.params.id);
         if(clan){
             res.json(clan);
         }else{
